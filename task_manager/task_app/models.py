@@ -21,7 +21,7 @@ class Task(models.Model):
 
 
 class Author(models.Model):
-    name = models.CharField()
+    name = models.CharField(max_length=100, verbose_name="Имя автора")
 
     def __str__(self):
         return self.name
@@ -31,7 +31,10 @@ class Author(models.Model):
 
 
 class TaskStatus(models.Model):
-    status = models.CharField()
+    status = models.CharField(
+        max_length=100,
+        verbose_name="Статус задачи"
+    )
 
     def __str__(self):
         return self.status
