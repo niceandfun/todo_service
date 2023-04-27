@@ -5,8 +5,8 @@
     <title>Tasks</title>
 </head>
 <body>
-{ %for task in task_list %}
+{% for task in task_list %}
 <div><a href="/tasks/{{ task.id }}">{{ task.title }}</a></div>
-{ %endfor %}
+{% endfor %}
 </body>
 </html>
